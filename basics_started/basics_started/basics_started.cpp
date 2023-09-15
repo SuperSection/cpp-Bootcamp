@@ -1,4 +1,4 @@
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -24,6 +24,30 @@ int main() {
 	*ap = 5; // here it's indicating the value at index 1 of the array
 	cout << another_array[0] << endl;
 	cout << another_array[1] << endl;
+
+	return 0;
+}
+*/
+
+
+#include <iostream>
+#include <cstdint>
+
+using namespace std;
+
+int main() {
+	// 1 byte is of 8 bits
+
+	printf("Size of this data type is %zu bits\n", sizeof(int) * 8);
+	printf("Size of this data type is %zu bits\n", sizeof(long long) * 8);
+	// long int, long long int show some ambiguity (according to your system)
+
+	printf("Size of this data type is %zu bits\n", sizeof(uint16_t) * 8);
+
+	int fun = 510;
+	fun = 0b111111110; // binary number representation
+	fun = 0x1FE;	   // hexadecimal number representation
+	printf("fun value is %d\n", fun);
 
 	return 0;
 }
