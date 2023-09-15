@@ -86,6 +86,7 @@ int main() {
 */
 
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -113,6 +114,40 @@ int main() {
 			puts("Please rate out app only between 1 and 5");
 			break;
 	}
+
+	return 0;
+}
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int my_numbers[] = { 4, 5, 6, 7, 8, 9, 0 };
+
+	int i = 0; // for iteration
+
+	while (i < 7) {
+		if (i == 3) {
+			// cout << "Special thing" << endl;
+			i++;
+			continue;
+		}
+		else
+			cout << "Current number is: " << my_numbers[i] << endl;
+		i++;
+	}
+
+	cout << "outside of the while loop" << endl;
+
+	i = 8;
+	// do-while always runs atleat for one time then check the condition
+	do {
+		cout << "Current number is: " << my_numbers[i] << endl;
+		i++;
+	} while (i < 7);
 
 	return 0;
 }
