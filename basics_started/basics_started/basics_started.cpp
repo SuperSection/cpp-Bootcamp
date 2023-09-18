@@ -179,6 +179,7 @@ int main() {
 */
 
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -213,6 +214,30 @@ int main() {
 		if (i == 0) break;	// to end the loop here, as it reaches the ending point of '0'
 		cout << "Char is: " << i << endl;
 	}
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	// printf("This size is %ld bits\n", sizeof(double) * 8);
+
+	float my_p_value = 20.2 + 20.2;
+
+	if (my_p_value == 40.400002) {
+		puts("You got it right");
+	}
+	else {
+		puts("Something went wrong");
+	}
+
+	printf("My precise value is: %.30f in float\n", my_p_value);
 
 	return 0;
 }
