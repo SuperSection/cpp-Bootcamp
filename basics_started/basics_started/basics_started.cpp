@@ -106,7 +106,7 @@ int main() {
 			break;
 		case 4:
 			puts("Rated as 4 star");
-			break;
+			// Fallthrough: It occurs in switch-case statements where when we forget to add a break statement and in that case flow of control jumps to the next line
 		case 5:
 			puts("Rated as 5 star");
 			break;
@@ -120,6 +120,7 @@ int main() {
 */
 
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -148,6 +149,29 @@ int main() {
 		cout << "Current number is: " << my_numbers[i] << endl;
 		i++;
 	} while (i < 7);
+
+	return 0;
+}
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int my_nums[] = { 2, 3, 4, 5, 6 };
+
+	for (int i = 0; i < 5; i++) {
+		cout << my_nums[i] << " ";
+	}
+	cout << endl;
+	cout << "Get a break!" << endl;
+
+	// 'ranged-base for' loop
+	for (int i : my_nums) {
+		cout << i << endl;
+	}
 
 	return 0;
 }
