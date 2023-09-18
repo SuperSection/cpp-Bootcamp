@@ -155,6 +155,7 @@ int main() {
 */
 
 
+/*
 #include <iostream>
 using namespace std;
 
@@ -171,6 +172,46 @@ int main() {
 	// 'ranged-base for' loop
 	for (int i : my_nums) {
 		cout << i << endl;
+	}
+
+	return 0;
+}
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	char my_string[] = "SuperSection";
+	char my_name[] = { 'p', 'a', 'g', 'o', 'l', 0 };
+	printf("My name is: %s\n", my_name);
+
+	cout << "take a break\n";
+
+	for (int i = 0; my_string[i] != 0; i++) {
+		cout << "Character is: " << my_string[i] << endl;
+	}
+
+	// all the non-zero values -> true	&	0(zero) -> false
+	for (int i = 0; my_name[i]; i++) {
+		cout << my_name[i];
+	}
+	cout << endl;
+
+	cout << "again take a little break\n";
+
+	// iteration using character pointer
+	for (char *cp = my_name; *cp != 0; cp++) {
+		cout << "Character is: " << *cp << endl;
+	}
+
+	printf("Take another break\n");
+
+	for (char i : my_string) {
+		if (i == 0) break;	// to end the loop here, as it reaches the ending point of '0'
+		cout << "Char is: " << i << endl;
 	}
 
 	return 0;
