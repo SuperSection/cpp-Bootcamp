@@ -331,7 +331,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -351,6 +351,30 @@ int main() {
 	else {
 		puts("Any access denied");
 	}
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	unsigned int x = 7; //  111
+	unsigned int y = 9; // 1001
+
+	//unsigned int z = x & y; // 0001
+	//unsigned int z = x | y; // 1111
+	//unsigned int z = x ^ y; // 1110
+
+	//unsigned int z = x << 1; // 1110
+	unsigned int z = x >> 2; // 001
+
+
+	cout << "Value of z is: " << z << endl;
 
 	return 0;
 }
