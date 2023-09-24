@@ -275,7 +275,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -298,6 +298,33 @@ int main() {
 	//sayThree() + 2;		-> shows error, as the function giving string output
 	//int(sayThree()) + 2;	-> not possible
 	sayThree();
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+int lifeUp() {
+	static int life = 3;
+	// return life++;	-> postfix operation: first use the variable, then do all the updates(increamentaion)
+	// return ++life;	-> prefix operation: first update(incrememtaion) the variable, then use it
+	return life = life + 1;	// using prefix notation is considered more efficient in many cases
+}
+
+int main() {
+
+	int life = 3;
+	cout << "Your starting game life is: " << life << endl;
+
+	life = lifeUp();
+	printf("Your updated game life is: %d\n", life);
+	
+	life = lifeUp();
+	printf("Your updated game life is: %d\n", life);
 
 	return 0;
 }
