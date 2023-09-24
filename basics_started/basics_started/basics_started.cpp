@@ -244,7 +244,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -271,4 +271,33 @@ int main() {
 	cout << "Keep on moving with rest of the code\n";
 
 	return  0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+void loveYou() {
+	puts("Love you so much Darling!");
+}
+
+int sayTwo() {
+	return 2;
+}
+
+void sayThree() {
+	puts("3");
+}
+
+int main() {
+
+	loveYou();
+	printf("%d\n", sayTwo() + 3);
+	//sayThree() + 2;		-> shows error, as the function giving string output
+	//int(sayThree()) + 2;	-> not possible
+	sayThree();
+
+	return 0;
 }
