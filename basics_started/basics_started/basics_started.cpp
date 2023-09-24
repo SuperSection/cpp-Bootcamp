@@ -357,7 +357,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -375,6 +375,28 @@ int main() {
 
 
 	cout << "Value of z is: " << z << endl;
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int* myp;
+
+	try {
+		myp = new int[10000000000];
+		cout << "Memory space allocation\n";
+		delete[] myp; // helps to release the memory, when it is no longer : needed / used / not able to allocate
+	}
+	catch (...) {
+		cout << "Failed in allocating memory\n";
+	}
 
 	return 0;
 }
