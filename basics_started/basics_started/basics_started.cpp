@@ -304,7 +304,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -325,6 +325,32 @@ int main() {
 	
 	life = lifeUp();
 	printf("Your updated game life is: %d\n", life);
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	//bool isSignedIn = true;
+	bool isFbUser = false;
+	bool isGoogleUser = true;
+	bool isAdmin = true;
+
+	if ((isGoogleUser || isFbUser) && isAdmin) {
+		puts("Welcome to admin panel");
+	}
+	else if (isGoogleUser || isFbUser) {
+		puts("Welcome back user");
+	}
+	else {
+		puts("Any access denied");
+	}
 
 	return 0;
 }
