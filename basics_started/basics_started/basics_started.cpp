@@ -381,7 +381,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -397,6 +397,40 @@ int main() {
 	catch (...) {
 		cout << "Failed in allocating memory\n";
 	}
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+struct User
+{
+	const int uId; // here the value itself is constant
+	const char* name; // here pointer is constant, not the value inside it
+	const char* email;
+	int course_count;
+};
+
+int main() {
+
+	User pagli = {001, "misty", "mistypagli@love.com", 5};
+	User pagol = {002, "soytan", "paglirpagol@love.com", 5};
+
+	User* myLove = &pagli;
+
+	cout << pagli.email << endl;
+
+	//pagol.uId = 20; -> not modifiable
+	pagol.email = "mistyrpagol@herlove.myqueen";
+
+	cout << pagol.name << endl << pagol.email << "\n";
+
+	myLove->course_count = 17;
+	cout << myLove->course_count << endl;
 
 	return 0;
 }
