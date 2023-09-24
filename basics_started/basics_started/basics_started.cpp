@@ -220,7 +220,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -240,4 +240,35 @@ int main() {
 	printf("My precise value is: %.30f in float\n", my_p_value);
 
 	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	char call_api = 's';
+
+	try {
+		cout << "Trying to use API values\n";
+		cout << "did some testing with API value\n";
+		throw call_api;
+		cout << "No Code gets executed after return and throw\n";
+	}
+	catch (int x) {
+		cout << "integer exception handled\n";
+	}
+	catch (float f) {
+		cout << "float exception handled\n";
+	}
+	catch (...) {
+		cout << "somthing went wrong\n";
+	}
+
+	cout << "Keep on moving with rest of the code\n";
+
+	return  0;
 }
