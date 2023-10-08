@@ -437,7 +437,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -455,6 +455,40 @@ int main() {
 	int myAttribute = COSSED;
 
 	cout << myAttribute << endl;
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string api_call() {
+	return "got some data from web\n";
+}
+
+int another_api_call() {
+	return 5;
+}
+
+int main() {
+	auto response = api_call();
+	auto res = another_api_call();
+
+	cout << "API CALL VALUE: " << response;
+	cout << "Another_API CALL VALUE: " << res << endl;
+
+	if (typeid(response) == typeid(string)) {
+		puts("Type of both ID matches");
+		// puts already includes a newline at the end of the statement
+	}
+	
+	if (typeid(res) == typeid(int)) {
+		puts("Type of both ID is int");
+	}
 
 	return 0;
 }
