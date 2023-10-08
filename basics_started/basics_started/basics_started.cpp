@@ -403,7 +403,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -431,6 +431,30 @@ int main() {
 
 	myLove->course_count = 17;
 	cout << myLove->course_count << endl;
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+//#define PI 3.14 // pre-processor constant
+
+enum MsOffice: uint8_t {
+	BOLD = 1,
+	ITALIC = 3,
+	UNDERLINE = 5,
+	COSSED
+};
+
+int main() {
+
+	int myAttribute = COSSED;
+
+	cout << myAttribute << endl;
 
 	return 0;
 }
