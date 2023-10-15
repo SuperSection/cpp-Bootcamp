@@ -461,7 +461,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 #include <string>
 using namespace std;
@@ -489,6 +489,41 @@ int main() {
 	if (typeid(res) == typeid(int)) {
 		puts("Type of both ID is int");
 	}
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+
+// Stack memory -> has predefined size, fastest and most default memory
+// Heap memory	-> predefined but can grow, not very fast
+
+struct User {
+	const int id;
+	int age;
+
+	// constructor
+	User() : id(001), age(18){}
+};
+
+int main() {
+	using namespace std;
+
+	// stack
+	int score = 100;
+	User mike;
+
+	// heap
+	int* heap_score = new int;
+	*heap_score = 200;
+
+	User* nike = new User();
+
+	delete heap_score;	// deallocated or free up of memory
+	delete nike;
 
 	return 0;
 }
