@@ -532,16 +532,17 @@ int main() {
 
 
 #include <iostream>
-// Function:
-	/*
-	what_I_will_give_back function_name(what_you_have_to_give_me) {
-
-		What I will do.
-
-		return 0;
-		// nothing execute after return
-	}
-	*/
+#include "adder.h"
+//	Function:
+	
+//		what_I_will_give_back function_name(what_you_have_to_give_me) {
+//
+//			What I will do.
+//
+//			return 0;
+//			// nothing execute after return
+//		}
+	
 
 void lifeUp_CV(int life) {
 	// call by value
@@ -556,14 +557,6 @@ void lifeUp_CR1(int* life) {
 void lifeUp_CR2(int &life) {
 	// call by reference
 	++life;	// Changes are made to the original variable
-}
-
-int addMe(int a, int b) {
-	return a + b;
-}
-
-float addMe(float a, float b) {
-	return a + b;
 }
 
 int main() {
