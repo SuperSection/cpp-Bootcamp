@@ -495,7 +495,7 @@ int main() {
 */
 
 
-
+/*
 #include <iostream>
 
 // Stack memory -> has predefined size, fastest and most default memory
@@ -524,6 +524,62 @@ int main() {
 
 	delete heap_score;	// deallocated or free up of memory
 	delete nike;
+
+	return 0;
+}
+*/
+
+
+
+#include <iostream>
+// Function:
+	/*
+	what_I_will_give_back function_name(what_you_have_to_give_me) {
+
+		What I will do.
+
+		return 0;
+		// nothing execute after return
+	}
+	*/
+
+void lifeUp_CV(int life) {
+	// call by value
+	++life;	 // Changes are made to the copy, doesn't effect the original argument
+}
+
+void lifeUp_CR1(int* life) {
+	// call by reference
+	++(*life);
+}
+
+void lifeUp_CR2(int &life) {
+	// call by reference
+	++life;	// Changes are made to the original variable
+}
+
+int addMe(int a, int b) {
+	return a + b;
+}
+
+float addMe(float a, float b) {
+	return a + b;
+}
+
+int main() {
+	int life = 4;
+	lifeUp_CV(life);	// a copy of actual variable is passed & not getting increamented here
+	lifeUp_CR1(&life);	// the memory address is passed & got increamented
+	lifeUp_CR2(life);	// a refernce is passed & got increamented
+	std::cout << "Life = " << life << std::endl;
+
+	int v1 = 5;
+	int v2 = 7;
+	float v3 = 4.6;
+	float v4 = 8.5;
+
+	std::cout << addMe(v1, v2) << std::endl;
+	std::cout << addMe(v3, v4) << std::endl;
 
 	return 0;
 }
