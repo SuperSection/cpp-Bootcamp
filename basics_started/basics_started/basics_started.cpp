@@ -559,6 +559,12 @@ void lifeUp_CR2(int &life) {
 	++life;	// Changes are made to the original variable
 }
 
+template<typename T>
+
+T addMe(T a, T b) {
+	return a + b;
+}
+
 int main() {
 	int life = 4;
 	lifeUp_CV(life);	// a copy of actual variable is passed & not getting increamented here
